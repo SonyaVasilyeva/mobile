@@ -3,16 +3,16 @@ public class Main {
 
         double balance = 100;
         double replenishmentAmount = 1300;
-        double newBalance = balance + replenishmentAmount;
-        int bonusCalculation = (int) replenishmentAmount / 100;
+        int bonusCalculation;
 
         if (replenishmentAmount > 1000) {
-            System.out.println("Количество бонусных рублей: " + bonusCalculation);
+            bonusCalculation = (int) replenishmentAmount / 100;
         } else {
-            System.out.println("Количество бонусных рублей: 0");
+            bonusCalculation = 0;
         }
-
+        double newBalance = balance + replenishmentAmount + bonusCalculation;
         System.out.println("Сумма счета: " + newBalance);
+        System.out.println("Количество бонусных рублей: " + bonusCalculation);
 
     }
     // Объявляете переменные для входных данных и
